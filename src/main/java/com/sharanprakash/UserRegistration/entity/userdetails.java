@@ -1,12 +1,13 @@
 package com.sharanprakash.UserRegistration.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "USER_DTLS")
 public class userdetails {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String fullname;
     private String email;
